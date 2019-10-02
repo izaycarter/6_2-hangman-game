@@ -112,7 +112,6 @@ word = randomword
 
 print("Welcome to Hangman!! \n")
 
-print(word)
 
 #runs untill errors is 6 for the mistakes
 guessed = []
@@ -140,16 +139,16 @@ while tries > 0:
     if guess in guessed or guess in wrong:
         print("Already guessed", guess)
     elif guess in word:
-        print("Yay")
+        print("Yay you got a letter")
         guessed.append(guess)
     else:
-        print("Nope")
+        print("that is not in the word")
         tries = tries - 1
         wrong.append(guess)
 
     print()
 
 if tries:
-    print("You guessed", word)
+    print("YOU WIN!!!!")
 else:
-    print("You didn't guess", word)
+    print("You Lost..")
